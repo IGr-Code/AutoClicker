@@ -1,0 +1,17 @@
+# For install Mouse write in cmd "pip install mouse"
+
+# Libraries
+import mouse
+from time import sleep
+
+while True:
+    # Check right mouse button
+    if mouse.is_pressed(button = 'right'):
+        while True:
+            # Check middle mouse button
+            if mouse.is_pressed(button = 'middle'):
+                break
+            else:
+                sleep(1)
+                # Auto dubleclick
+                mouse.double_click(button= 'left')
